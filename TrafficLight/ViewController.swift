@@ -40,7 +40,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButtonDidTapped() {
+        if switchButton.currentTitle == "START" {
+            switchButton.setTitle("NEXT", for: .normal)
+        }
         
+        switch currentLight {
+        case .red:
+            greenColor.alpha = lightIsOff
+            redColor.alpha = lightIsOn
+            currentLight = .yellow
+        case .yellow:
+            redColor.alpha = lightIsOff
+            yellowColor.alpha = lightIsOn
+            currentLight = .green
+        case .green:
+            yellowColor.alpha = lightIsOff
+            greenColor.alpha = lightIsOn
+            currentLight = .red
+        }
     }
     
 }
