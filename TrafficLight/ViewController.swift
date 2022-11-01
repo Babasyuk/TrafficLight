@@ -30,13 +30,12 @@ class ViewController: UIViewController {
         redColor.alpha = lightIsOff
         yellowColor.alpha = lightIsOff
         greenColor.alpha = lightIsOff
-        
+    }
+    
+    override func viewWillLayoutSubviews() {
         redColor.layer.cornerRadius = redColor.frame.width / 2
         yellowColor.layer.cornerRadius = yellowColor.frame.width / 2
         greenColor.layer.cornerRadius = yellowColor.frame.width / 2
-
-
-        
     }
 
     @IBAction func startButtonDidTapped() {
@@ -59,7 +58,6 @@ class ViewController: UIViewController {
             currentLight = .red
         }
     }
-    
 }
 
 // MARK: - CurrentLight
