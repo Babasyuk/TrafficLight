@@ -25,6 +25,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switchButton.layer.cornerRadius = 10
+        
+        redColor.alpha = lightIsOff
+        yellowColor.alpha = lightIsOff
+        greenColor.alpha = lightIsOff
+        
+        redColor.layer.cornerRadius = redColor.frame.width / 2
+        yellowColor.layer.cornerRadius = yellowColor.frame.width / 2
+        greenColor.layer.cornerRadius = yellowColor.frame.width / 2
+
+
+        
     }
 
     @IBAction func startButtonDidTapped() {
